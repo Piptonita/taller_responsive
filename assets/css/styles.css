@@ -1,9 +1,22 @@
+/* PALETA DE COLORES:
+BLACK COFFEE: HEX = #342D34, RGB = (52, 45, 52)
+WHITE: HEX = #FBFFFE, RGB = (251, 255, 254)
+XANADU: HEX = #808F85, RGB = (128, 143, 133)
+IMPERIAL RED: HEX = #F71735, RGB = (247, 23, 53)
+MANGO TANGO: HEX = #F98948, RGB = (249, 137, 72)
+*/
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background: yellow;
+    background: #F98948;
     margin: 0 auto;
     font-family: 'Alata', sans-serif;
     height: 1280px;
 }
+
 h1, h2, h3, h4, h5{
     font-family: 'Russo One', sans-serif;
     text-align: center;
@@ -15,10 +28,55 @@ h2{
     font-size: 40px;
 }
 
+h3{
+    padding: 55px 0px;
+    font-size: 36px;
+}
 
+h4{
+    padding: 30px 0px;
+    font-size: 30px;
+}
+
+.container{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .column-m{
+        width: 50vw;
+        margin-top: 150px;
+    }
+        .column-m p {
+            color: #F98948;
+            font-size: 20px;
+            padding-right: 50px;
+        }
+
+    .column-s{
+        width: 33.333333333%;
+    }
+        .column-s h4{
+            color: #342D34;
+        }
+        .column-s a {
+            text-decoration: none;
+            color: #FBFFFE;
+            padding: 5px 10px;
+        }
 /* BARRA DE NAVEGACIÓN */
 nav{
     position: fixed;
+    z-index: 3;
     width: 100%;
     background: black;
     height: 50px;
@@ -28,11 +86,14 @@ nav{
     box-shadow: 0px 0px 8px black;
 }
     nav h1{
-        color: white;
+        color: #FBFFFE;
         transition: 0.5s;
         width: 20%;
         text-align: left;
         padding-left: 18px;
+    }
+    nav a{
+        color: #FBFFFE;
     }
 
     .navigator{
@@ -56,10 +117,127 @@ nav{
 
 /* CABECERA DEL SITIO */
 header{
+    position: relative;
     background: red;
-    height: 720px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
-    header h1{
+    header div{
+        position: absolute;
+        z-index: 2;
+        background: RGBA(52, 45, 52, 0.5);
+        width: 100%;
+        height: 100vh;
+    }
+    header div h1{
+        color: #F98948;
         padding-top: 140px;
         font-size: 60px;
+        text-shadow: 0px 0px 8px #000000;
     }
+    header div h2{
+        color: #F98948;
+        text-shadow: 0px 0px 8px #000000;
+    }
+
+/* SOBRE MI */
+#sobre-mi{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #342D34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    #sobre-mi h3{
+        color: #808F85;
+    }
+    .marco {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 30% 55%;
+        box-shadow: 0px 0px 5px #000000;
+    }
+        .marco img {
+            height: 300px;
+            max-width: 300px;
+        }
+
+/* FOOTER */
+footer{
+    background: #F98948;
+    width: 100%;
+    height: 50vh;
+}
+.fa-envelope-o, .fa-mobile {
+    font-size: 25px;
+    padding-right: 5px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (orientation: landscape) and (height: 600px){
+    .column-m {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        width: 100%;
+    }
+    .column-m {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 840px){
+    nav h1{
+        width: 40%;
+    }
+    .navigator{
+        width: 60%;
+    }
+    header div h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 30px;
+        padding-top: 55px;
+        padding-bottom: 20px;
+    }
+    h4{
+        font-size: 20px;
+        margin-top: 80px;
+    }
+    .column-m {
+        margin-top: 0px;
+    }
+        .column-m p{
+            font-size: 14px;
+        }
+    .column-s a{
+        font-size: 12px;
+        text-align: center;
+    }
+    .marco{
+        height: 150px;
+        max-width: 150px;
+    }
+        .marco img {
+            height: 150px;
+            max-width: 150px;
+        }
+    
+    .fa-envelope-o, .fa-mobile {
+        font-size: 20px;
+    }
+}

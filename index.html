@@ -9,20 +9,64 @@
     <meta name="author" content="Guillermo Granados Gómez">
     <title>Sitio Personal - La web que he creado para aprender</title>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <nav>
         <h1>Sitio Personal</h1>
         <div class="navigator">
-            <a href="">Inicio</a>
-            <a href="">Sobre mi</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mi</a>
             <a href="">Blog</a>
         </div>
     </nav>
-    <header>
-        <h1>Sitio personal</h1>
-        <h2>Mi sitio web con el que aprendo diseño responsive</h2>
+    <header id="inicio">
+        <img src="assets/img/fondo.jpg" alt="Fondo espacial">
+        <div>
+            <h1>Sitio personal</h1>
+            <h2>Mi sitio web con el que aprendo diseño responsive</h2>
+        </div>
     </header>
+    <section id="sobre-mi">
+        <h3>Sobre mi</h3>
+        <div class="row container">
+            <div class="column column-m">
+                <div class="marco">
+                    <img src="http://www.piptonita.com/static/core/img/yo.jpeg" alt="Foto personal">
+                </div>
+            </div>
+            <div class="column column-m">
+                <p>Desarrollador Django y amante del software libre, el mundo maker y los videojuegos clásicos. He creado este sitio web con el propósito de compartir de forma libre mis conocimientos en Ciencias de la Computación.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="column column-s">
+                <h4>Mi sitio</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre mi</a>
+                <a href="">Blog</a>
+            </div>
+            <div class="column column-s">
+                <h4>Contacto</h4>
+                <a href="mailto:guillermogranadosgomez@gmail.com">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    guillermogranadosgomez@gmail.com
+                </a>
+                <a href="tel:744607487">
+                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                    744607487
+                </a>
+            </div>
+            <div class="column column-s">
+                <h4>Últimas entradas</h4>
+                <a href="">Como saber si te han hackeado</a>
+                <a href="">¿a quién le gusta los videojuegos retro?</a>
+                <a href="">¿queréis verme probar juegos en este canal?</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
